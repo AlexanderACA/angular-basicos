@@ -13,16 +13,17 @@
         </ul> -->
     </div>
     <div class="col">
-        <h3>Agregar<small>{{nuevo.nombre}}</small> </h3>
+        <app-agregar [nuevo]="nuevo" (onNuevoPersonaje)="agregarNuevoPersonaje($event)"></app-agregar>
+        <!-- <h3>Agregar<small>{{nuevo.nombre}}</small> </h3>
         <hr>
         <form action="" (ngSubmit)="agregar()">
             <input 
                 type="text" name="nombre" id="" placeholder="Nombre"
                 [(ngModel)]="nuevo.nombre"
             />
-            <!-- [value]="nuevo.nombre"
-                (input)="cabiarNombre($event)"
-             -->
+            //[value]="nuevo.nombre"
+              //  (input)="cabiarNombre($event)"
+            
              <input 
                 type="text"
                 placeholder="Poder"
@@ -32,6 +33,6 @@
             <button type="submit">
                 Agregar
             </button>
-        </form>
+        </form> -->
     </div>
 </div>
