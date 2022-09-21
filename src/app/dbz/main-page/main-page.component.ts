@@ -16,13 +16,13 @@ export class MainPageComponent implements OnInit {
   }
 
   //injecion de dependencia
-  constructor(private dbzService:DbzService) {
+  constructor() {
 
    }
 
   ngOnInit(): void {
   }
-
+/*
   get personajes():Personaje[]{
     return this.dbzService.personajes;
   }
@@ -32,6 +32,6 @@ export class MainPageComponent implements OnInit {
     //debugger;
     this.personajes.push(argumento);
   }
-
+ */
 
 }

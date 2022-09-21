@@ -3,7 +3,10 @@
 
 <div class="row">
     <div class="col">
-        <app-personajes [personajes]="personajes"></app-personajes>
+      <app-personajes></app-personajes>
+
+        <!-- <app-personajes [personajes]="personajes"></app-personajes> -->
+
         <!-- <h3>Personaje</h3>
         <hr>
         <ul>
@@ -13,21 +16,23 @@
         </ul> -->
     </div>
     <div class="col">
-        <app-agregar [nuevo]="nuevo" (onNuevoPersonaje)="agregarNuevoPersonaje($event)"></app-agregar>
+        <app-agregar [nuevo]="nuevo"></app-agregar>
+
+        <!-- <app-agregar [nuevo]="nuevo" (onNuevoPersonaje)="agregarNuevoPersonaje($event)"></app-agregar> -->
         <!-- <h3>Agregar<small>{{nuevo.nombre}}</small> </h3>
         <hr>
         <form action="" (ngSubmit)="agregar()">
-            <input 
+            <input
                 type="text" name="nombre" id="" placeholder="Nombre"
                 [(ngModel)]="nuevo.nombre"
             />
             //[value]="nuevo.nombre"
               //  (input)="cabiarNombre($event)"
-            
-             <input 
+
+             <input
                 type="text"
                 placeholder="Poder"
-                name="poder" 
+                name="poder"
                 [(ngModel)]="nuevo.poder"
             />
             <button type="submit">

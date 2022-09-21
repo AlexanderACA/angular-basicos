@@ -7,9 +7,14 @@ import { DbzService } from '../services/dbz.service';
 })
 export class PersonajesComponent implements OnInit {
 
-  @Input() personajes:any[]=[];
+  //@Input() personajes:any[]=[];
 
-  constructor(private dbzService:DbzService) { }
+  get personajes(){
+    return this.dbzService.personajes;
+  }
+  constructor(private dbzService:DbzService) {
+
+   }
 
   ngOnInit(): void {
   }
