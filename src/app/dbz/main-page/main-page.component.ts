@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Personaje } from '../interfaces/dbz.interface';
+import { DbzService } from '../services/dbz.service';
 
 
 
@@ -9,24 +10,21 @@ import { Personaje } from '../interfaces/dbz.interface';
 })
 export class MainPageComponent implements OnInit {
 
-  personajes:Personaje[] =[
-    {
-      nombre:'Goku',
-      poder:15000
-    },{
-      nombre:'Vegeta',
-      poder: 7500
-    }
-  ]
-
   nuevo:Personaje = {
     nombre: 'Maestro roshi',
     poder: 1000
   }
 
-  constructor() { }
+  //injecion de dependencia
+  constructor(private dbzService:DbzService) {
+
+   }
 
   ngOnInit(): void {
+  }
+
+  get personajes():Personaje[]{
+    return this.dbzService.personajes;
   }
 
   agregarNuevoPersonaje(argumento:Personaje){
@@ -34,5 +32,6 @@ export class MainPageComponent implements OnInit {
     //debugger;
     this.personajes.push(argumento);
   }
+
 
 }
